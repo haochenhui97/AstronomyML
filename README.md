@@ -35,7 +35,7 @@ We used the method described in our early project [Astronomy Dataset for ML](htt
 - changed step size to be one hour to increase prediction accuracy; 
 - downloaded the same format of solar ephemerides in addition to lunar ephemerides from the same [NASA HORIZONS Web-Interface](https://ssd.jpl.nasa.gov/horizons.cgi#top) since moon phase is influenced by not only its own position but also the solar position.
 
-The result of data preprocessing (preliminary_analysis.ipynb) is saved as [processed_moon_10yrs.csv](https://github.com/haochenhui97/AstronomyML/blob/main/Data/processed_moon_10yrs.csv) and [processed_sun_10yrs.csv](https://github.com/haochenhui97/AstronomyML/blob/main/Data/processed_sun_10yrs.csv).
+The results of data preprocessing (preliminary_analysis.ipynb) are saved as [processed_moon_10yrs.csv](https://github.com/haochenhui97/AstronomyML/blob/main/Data/processed_moon_10yrs.csv) and [processed_sun_10yrs.csv](https://github.com/haochenhui97/AstronomyML/blob/main/Data/processed_sun_10yrs.csv).
 
 ## Training Models
 We ran some data analysis and drew several plots in []() to help us better understand the law of solar and lunar motions.  
