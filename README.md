@@ -4,7 +4,7 @@ Group: CKK (Chenhui Hao, Kaijing Ding, Ke Liu, Zishan Cheng)
 
 ## Description 
 
-Requirements to run different models are specified in each notebook file. 
+This project is inspired by ancient Chinese astronomer Liu Hong's method of predicting positions of heavenly objects and moon phases. We reviewed and improved his works by building parametric models to acquire more accuracy in prediction of positions and lunar illumination. We also applied Neural Network and Random Forests models to discover patterns of lunar movements and make predictions on lunar illumination without any Astronomy knowledge beforehand, and found inspiring results in prediction accuracy compared with theory-based OLS model. 
 
 ## Repository Navigation 
 - Data
@@ -28,9 +28,16 @@ Requirements to run different models are specified in each notebook file.
 - README.md  
 
 ## Generating Data
-We used the method described in [Astronomy Dataset for ML](https://github.com/haochenhui97/AstronomyDatasetForML). Since all the observed astronomy parameters are different among observation sites, we use Beijing as the case study. We download 10-year dataranging from 2009-1-1 0:0 UT to 2019-1-1 0:0 UT with step size of one hour at Beijing. The result of data preprocessing (preliminary_analysis.ipynb) is saved as [processed_moon_10yrs.csv](https://github.com/haochenhui97/AstronomyML/blob/main/Data/processed_moon_10yrs.csv).
+We used the method described in our early project [Astronomy Dataset for ML](https://github.com/haochenhui97/AstronomyDatasetForML) to generate data with the following changes:
+- added one more feature of percentage of illumination on moon surface;
+- chose Beijing as the only observing site;
+- downloaded 10-year data from 2009-1-1 00:00 UT to 2019-1-1 00:00 UT;
+- changed step size to be one hour to increase prediction accuracy; 
+- downloaded the same format of solar ephemerides in addition to lunar ephemerides from the same [NASA HORIZONS Web-Interface](https://ssd.jpl.nasa.gov/horizons.cgi#top) since moon phase is influenced by not only its own position but also the solar position.
+
+The result of data preprocessing (preliminary_analysis.ipynb) is saved as [processed_moon_10yrs.csv](https://github.com/haochenhui97/AstronomyML/blob/main/Data/processed_moon_10yrs.csv).
 
 ## Training Models
-We ran some data analysis and drew several plots in []() to help us better understand the law of sun's and moon's motions.  
+We ran some data analysis and drew several plots in []() to help us better understand the law of solar and lunar motions.  
 We used [Fourier Transform](https://github.com/haochenhui97/AstronomyML/blob/main/Scripts/position_prediction.ipynb) to calculate moon's RA, DEC, position and sun's RA, DEC, position.  
 We used [Random Forest](https://github.com/haochenhui97/AstronomyML/blob/main/Scripts/Theoretical%20models%20on%20moon%20phase.ipynb) and [Neural Network](https://github.com/haochenhui97/AstronomyML/blob/main/Scripts/Neural_network/neural_network.ipynb) to predict moon phases.  
